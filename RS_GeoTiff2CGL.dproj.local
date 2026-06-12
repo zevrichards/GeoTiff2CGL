@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2024/12/09 12:04:16.000.820,=C:\Users\CSI\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/12/09 12:08:09.000.670,C:\Users\CSI\Documents\Embarcadero\Studio\Projects\GeoTiff2CGL\GeoTiff2CGL.dfm=C:\Users\CSI\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2024/12/09 12:08:09.000.670,C:\Users\CSI\Documents\Embarcadero\Studio\Projects\GeoTiff2CGL\GeoTiff2CGL.pas=C:\Users\CSI\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/12/09 12:08:39.000.820,C:\Users\CSI\Documents\Embarcadero\Studio\Projects\GeoTiff2CGL\RS_GeoTiff2CGL.dproj=C:\Users\CSI\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2024/12/09 12:27:43.000.715,=C:\Users\CSI\Documents\Embarcadero\Studio\Projects\gdal-pascal-master\units\gdal.pas</Transaction>
+    <Transaction>2024/12/09 12:27:43.000.734,=C:\Users\CSI\Documents\Embarcadero\Studio\Projects\gdal-pascal-master\units\osr.pas</Transaction>
+    <Transaction>2024/12/09 12:27:43.000.720,=C:\Users\CSI\Documents\Embarcadero\Studio\Projects\gdal-pascal-master\units\gdalcore.pas</Transaction>
+    <Transaction>2024/12/09 12:27:43.000.727,=C:\Users\CSI\Documents\Embarcadero\Studio\Projects\gdal-pascal-master\units\ogr.pas</Transaction>
+    <Transaction>2024/12/09 13:27:46.000.027,C:\Users\CSI\Documents\Embarcadero\Studio\Projects\gdal-pascal-master\units\osr.pas=</Transaction>
+    <Transaction>2024/12/09 13:28:09.000.251,C:\Users\CSI\Documents\Embarcadero\Studio\Projects\gdal-pascal-master\units\ogr.pas=</Transaction>
+    <Transaction>2024/12/09 13:29:10.000.006,C:\Users\CSI\Documents\Embarcadero\Studio\Projects\gdal-pascal-master\units\gdalcore.pas=</Transaction>
+    <Transaction>2024/12/09 13:29:16.000.007,C:\Users\CSI\Documents\Embarcadero\Studio\Projects\gdal-pascal-master\units\gdal.pas=</Transaction>
+  </Transactions>
+</BorlandProject>

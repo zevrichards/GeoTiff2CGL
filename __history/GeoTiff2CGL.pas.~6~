@@ -1,0 +1,115 @@
+unit GeoTiff2CGL;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
+
+//  GDAL, ogr, osr,
+
+  Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    OpenGeoTIFFButton: TButton;
+    GeoTIFFEdit: TEdit;
+    OpenDialog1: TOpenDialog;
+    Memo1: TMemo;
+    ProcessButton: TButton;
+    XMLEdit: TEdit;
+    OpenXML: TButton;
+    procedure OpenGeoTIFFButtonClick(Sender: TObject);
+    procedure OpenXMLClick(Sender: TObject);
+    procedure ProcessButtonClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.OpenGeoTIFFButtonClick(Sender: TObject);
+begin
+  OpenDialog1.Filter := 'GeoTIFF files (*.tif)|*.TIF';
+  OpenDialog1.Options := [];
+  If OpenDialog1.Execute() then
+  begin
+    GeoTiffEdit.Text := OpenDialog1.FileName;
+  end;
+end;
+
+procedure TForm1.OpenXMLClick(Sender: TObject);
+begin
+  OpenDialog1.Filter := 'XML files (*.xml)|*.XML';
+  OpenDialog1.Options := [];
+  If OpenDialog1.Execute() then
+  begin
+    GeoTiffEdit.Text := OpenDialog1.FileName;
+  end;
+end;
+
+procedure TForm1.ProcessButtonClick(Sender: TObject);
+var
+//  dataset: GDALDatasetH;
+  fileName: string;
+  widthPixels, geotransform: array[0..5] of Double;
+  widthMeters: Double;
+
+begin
+  {
+
+  // Initialize GDAL
+  GDALAllRegister;
+
+  // Set the filename of the GeoTIFF (replace with your file path)
+  fileName := GeoTiffEdit.Text;  // Replace with your GeoTIFF file path
+
+  // Open the GeoTIFF file
+  dataset := GDALOpen(PChar(fileName), GA_ReadOnly);
+
+  if dataset = nil then
+  begin
+    Memo1.Lines.Add('Error opening GeoTIFF file');
+    Halt(1);
+  end;
+
+  // Get the geotransform for the dataset
+  if GDALGetGeoTransform(dataset, @geotransform) = CE_None then
+  begin
+    // Get the width (number of pixels) of the raster
+    widthPixels := GDALGetRasterXSize(dataset);
+
+    // The pixel size in the X direction is stored in geotransform[1] (pixel width)
+    // Convert width to meters by multiplying pixel count by pixel size in meters
+    widthMeters := widthPixels * geotransform[1]; // geotransform[1] is the pixel size in meters
+
+    // Output the width in meters
+    Memo1.Lines.Add('Width of the GeoTIFF in meters: ', widthMeters:0:2);
+  end
+  else
+  begin
+    Memo1.Lines.Add('Error getting geotransform');
+    GDALClose(dataset);
+    Halt(1);
+  end;
+
+  // Close the dataset
+  GDALClose(dataset);
+
+  // Finalize GDAL
+  GDALDestroyDriverManager;
+  }
+end;
+
+
+end.
+
+
+
